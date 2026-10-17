@@ -5,7 +5,7 @@
   --surface-raised: #121212;
   --white: #f5f2ed;
   --muted: #9a9692;
-  --red: #ff0000;
+  --red: #f80101;
   --line: #292525;
   --display: "Bungee", Impact, sans-serif;
   --body: "DM Sans", Arial, sans-serif;
@@ -24,9 +24,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .section-wrap { width: min(100% - 40px, 1180px); margin-inline: auto; }
 .section-pad { padding-block: 82px; }
 .site-header { position: sticky; z-index: 50; top: 0; display: flex; min-height: 70px; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid #ffffff12; background: #000000ed; backdrop-filter: blur(16px); }
-.wordmark { display: inline-flex; align-items: baseline; gap: 4px; font: 18px/1 var(--display); letter-spacing: -1.2px; white-space: nowrap; }
-.wordmark-hot { color: var(--red); text-shadow: 0 0 14px #f00000a3; }
-.wordmark-record { color: var(--muted); font-size: 9px; letter-spacing: 1px; }
+.brand-link { display: inline-flex; flex: 0 0 auto; align-items: center; }
+.brand-logo { display: block; width: auto; max-width: min(180px, 42vw); max-height: 50px; object-fit: contain; }
 .menu-toggle { display: grid; width: 44px; height: 44px; align-content: center; justify-items: center; gap: 5px; border: 1px solid var(--line); background: transparent; color: var(--white); cursor: pointer; }
 .menu-toggle span { width: 18px; height: 2px; background: currentColor; transition: transform .2s, opacity .2s; }
 .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(7px) rotate(45deg); }
@@ -56,14 +55,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .button-ghost:hover, .button-outline:hover { border-color: var(--red); color: var(--red); }
 .hero-location { margin: 24px 0 0; color: var(--muted); font-size: 10px; letter-spacing: .5px; }
 .hero-location span { padding-right: 7px; color: var(--red); }
-.hero-art { position: relative; display: grid; min-height: 300px; overflow: hidden; place-items: center; border: 1px solid #5d1010; background: radial-gradient(ellipse at 52% 49%, #490909 0%, #1c0808 34%, #080707 74%); }
-.hero-grid { position: absolute; inset: 0; opacity: .14; background-image: linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px); background-size: 32px 32px; mask-image: linear-gradient(130deg, black, transparent 75%); }
-.hero-stamp { position: absolute; top: 24px; left: 24px; display: grid; width: 67px; height: 67px; place-content: center; border: 1px solid #ff5757; border-radius: 50%; color: var(--red); text-align: center; transform: rotate(-12deg); }
-.hero-stamp span { font: 21px/1 var(--display); }
-.hero-stamp small { margin-top: 5px; font-size: 6px; letter-spacing: 1px; }
-.placeholder-label { position: relative; margin: 0; color: #ffffffa8; font: 19px var(--display); letter-spacing: 3px; text-shadow: 0 0 22px #ff0000a6; }
-.hero-side-note { position: absolute; right: 12px; bottom: 42px; color: #d7aaaa; font-size: 7px; letter-spacing: 1.8px; writing-mode: vertical-rl; }
-.hero-index { position: absolute; right: 16px; bottom: 14px; color: var(--red); font-size: 9px; letter-spacing: 2px; }
+.hero-art { position: relative; display: grid; min-height: 0; overflow: hidden; place-items: center; background: var(--black); }
+.hero-logo { display: block; width: 100%; max-width: 620px; height: auto; object-fit: contain; }
 .scroll-cue { position: absolute; bottom: 17px; left: 0; display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 9px; letter-spacing: 1px; text-transform: uppercase; }
 .scroll-cue span { width: 29px; height: 1px; background: var(--red); }
 .ticker { overflow: hidden; border-block: 1px solid #351010; background: #100303; }
@@ -178,7 +171,7 @@ h2 { font-size: clamp(35px, 9vw, 58px); }
 .form-note { margin: 0; color: #77716c; font-size: 10px; }
 .site-footer { border-top: 1px solid var(--line); background: #030303; }
 .footer-inner { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px; padding-block: 23px; }
-.footer-wordmark { font-size: 15px; }
+.footer-brand .brand-logo { max-height: 42px; }
 .footer-inner > p { grid-column: 1 / -1; grid-row: 2; margin: 0; color: var(--muted); font-size: 10px; }
 .back-top { color: #d8d3cf; font-size: 10px; }
 .back-top:hover { color: var(--red); }
